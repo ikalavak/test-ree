@@ -68,6 +68,17 @@ The organization is moving away from Azure AD B2C and needs a secure, repeatable
 
 The architecture includes a resource group, VNet, app subnet, private endpoint subnet, Azure Container Apps Environment, ACR, Key Vault, Azure SQL, Log Analytics, Application Insights, Azure Monitor, managed identity, and private endpoints for data services.
 
+
+![Uploading ChatGPT Image Sep 18, 2026 at 12_35_07 PM.png…]()
+
+
+
+
+
+
+
+
+
 ## 3. Azure services
 
 - Azure Resource Group
