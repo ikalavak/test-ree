@@ -56,24 +56,7 @@ Cleanup:
 az group delete -n rg-identity-platform-demo --yes --no-wait
 ```
 
-Interview demo script (5 minutes)
-1. Show project layout and explain `main.bicep` and `modules/`.
-2. Open `modules/container-environment.bicep` and `modules/container-app.bicep` and explain Container Apps managed environment and app config.
-3. Run `bicep build main.bicep` and `az deployment group what-if` to show safety checks.
-4. Show `environments/` parameter files and how they change per environment.
-5. Walk through `deploy.yml` to show CI/CD pipeline with What-If and OIDC-based login.
 
-Potential interview questions and suggested answers
-- Q: How do you avoid config drift?
-  A: Single source of truth in Bicep modules, environment parameter files, What-If validations, PR reviews, and CI/CD.
-- Q: How will Container Apps pull images from ACR securely?
-  A: Use system-assigned or user-assigned managed identity on the container app and grant the AcrPull role on the registry scope.
-- Q: How do you secure secrets?
-  A: Store secrets in Key Vault and reference them via secure parameter references or runtime environment variables using managed identities.
-
-Next steps (optional)
-- Wire ACR integration with `modules/role-assignments.bicep` by setting `mode: 'create'` and providing the principal id.
-- Add private endpoints for SQL and Key Vault by enabling private endpoint creation and Private DNS.# Azure Identity Platform Infrastructure
 
 This repository contains a reusable Azure Bicep proof-of-concept for an identity platform infrastructure targeting internal users and external partners. The emphasis is on infrastructure deployment, networking, monitoring, secure access, and repeatable environment separation rather than implementing a real customer identity system.
 
